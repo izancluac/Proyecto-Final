@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo3"
+    android:id="@+id/main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomIcons">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tu perfil"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Contenedor con imagen de perfil + lápiz encima -->
+                <FrameLayout
+                    android:layout_margin="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                   >
+
+                    <ImageView
+                        android:id="@+id/ivImagenPerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder" />
+
+                    <ImageView
+                        android:id="@+id/lapiEditar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="4dp"
+                        android:alpha="0.5"
+                        android:src="@drawable/lapiz_editar"
+
+                    android:padding="4dp" />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                  >
+
+                    <TextView
+                        android:id="@+id/tvNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Desconocido"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/ivlapiEditar2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top|center"
+                        android:alpha="0.5"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+
+                        android:src="@drawable/lapiz_editar" />
+                </FrameLayout>
+
+                <!-- Nombre del usuario -->
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btcerrarSesion"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Cerrar sesión"
+                android:backgroundTint="@color/black"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomIcons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iconoHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icono_casa_sinfondo"
+            android:layout_margin="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/iconoVenta"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icono_venta_sinfondo"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/iconoPerfil"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icono_perfil"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:id="@+id/iconomensaje"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icono_mensaje"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
